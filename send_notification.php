@@ -15,6 +15,7 @@ if (!isset($_SESSION["user_id"])) {
 <html>
 <head>
     <title>Send Notification</title>
+<link rel="stylesheet" type="text/css" href="styles.css">
 </head>
 <body>
     <h1>Send Notification</h1>

@@ -14,6 +14,7 @@ if (!isset($_SESSION["user_id"])) {
 <!DOCTYPE html>
 <html>
 <head>
+<link rel="stylesheet" type="text/css" href="styles.css">
     <title>Generate Reports</title>
 </head>
 <body>

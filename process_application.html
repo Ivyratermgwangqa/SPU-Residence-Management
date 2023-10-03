@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		    <meta charset="UTF-8">
+		        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+			    <title>Residence Application Form</title>
+	</head>
+	<body>
+		    <h1>Residence Application Form</h1>
+		        <form method="POST" action="process_application.php">
+				        <label for="student_name">Student Name:</label>
+					        <input type="text" id="student_name" name="student_name" required><br>
+						        
+						        <label for="student_email">Student Email:</label>
+							        <input type="email" id="student_email" name="student_email" required><br>
+								        
+								        <label for="desired_residence">Desired Residence:</label>
+									        <select id="desired_residence" name="desired_residence" required>
+											            <option value="Residence A">Residence A</option>
+												                <option value="Residence B">Residence B</option>
+														            <!-- Add more options as needed -->
+															            </select><br>
+																            
+																            <input type="submit" value="Submit Application">
+																	        </form>
+	</body>
+</html>

@@ -3,75 +3,72 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-   
 </head>
 <body>
     <nav>
-    <div class="logo">
+        <div class="logo">
             <h1>SPU Residence System</h1>
-    </div>
-    <div class="links">
-        <a href="#">Home</a>
-        <a href="#">Announcements</a>
-        <button id="login">Student Login</button>  
-        <button id="login">Manager Login</button>
-        <button id="register">Accommodation</button>
-    </div>
-        
+        </div>
+        <div class="links">
+            <a href="#">Home</a>
+            <a href="#">Announcements</a>
+            <button class="login" id="student-login">Student Login</button>
+            <button class="login" id="manager-login">Manager Login</button>
+            <button id="register">Accommodation</button>
+        </div>
     </nav>
     <div class="main">
         <form action="#">
-          <div class="registration">
-             <h2>Accommodation Application</h2>
-              
-              <input type="text" name="" id="name" placeholder="Name">
-              <input type="text" name="" id="name" placeholder="Surname" >
-              <input type="number" name="" id="number" placeholder="identity number" >
-              <input type="email" name="" id="email" placeholder="Email">
-              <input type="number" name="" id="Number" placeholder="Student No" >
-              <input type="year" name="" id="year" placeholder="year" >
-             <input type="text" list="residences" id="residence" name="" placeholder="Select Residence">
-                  <datalist id="residences">
+            <div class="registration">
+                <h2>Accommodation Application</h2>
+                <input type="text" name="name" id="name" placeholder="Name">
+                <input type="text" name="surname" id="surname" placeholder="Surname">
+                <input type="number" name="identity-number" id="identity-number" placeholder="Identity Number">
+                <input type="email" name="email" id="email" placeholder="Email">
+                <input type="number" name="student-number" id="student-number" placeholder="Student No">
+                <input type="text" list="residences" id="residence" name="residence" placeholder="Select Residence">
+                <datalist id="residences">
                     <option value="Moroka Hall Of Residence"></option>
                     <option value="Rathaga Hall Of Residence"></option>
                     <option value="Tauana Hall Of Residence"></option>
                     <option value="Muhudi Hall Of Residence"></option>
-                  </datalist>
-              <input type="submit"  value="Apply">
-              <div class="terms">Already have an account? <a href="#" id="login_from_form">Login</a></div>
-          </div>
-          </form>
-          <div class="login">
-            <h2>Login</h2>
-             <input type="email" name="" id="email" placeholder="Email">
-             <input type="password" name="" id="pass" placeholder="Password" >
-             <div class="Remember-Forgot"><p><input type="checkbox">Remember me? <a href="#"></p>Forgot password</a></div>
-             <input type="submit" value="Login">
-             <div class="terms">Dont have an account? <a href="#" id="register_from_form">register</a></div>
-         </div>
+                </datalist>
+                <input type="submit" value="Apply">
+                <div class="terms">Already have an account? <a href="#" id="login_from_form">Login</a></div>
+            </div>
+        </form>
+        <div class="login">
+            <h2>Student Login</h2>
+            <form action="student-login.php" method="post">
+                <div class="form-group">
+                    <label for="username">Username</label>
+                    <input type="text" id="username" name="username" required>
+                </div>
+                <div class="form-group">
+                    <label for="password">Password</label>
+                    <input type="password" id="password" name="password" required>
+                </div>
+                <button type="submit">Login</button>
+            </form>
+        </div>
         <div class="manager-login-container">
-    <h1>Manager Login</h1>
-    <form action="manager-login.php" method="post">
-        <div class="form-group">
-            <label for="manager-username">Username</label>
-            <input type="text" id="manager-username" name="manager-username" required>
+            <h2>Manager Login</h2>
+            <form action="manager-login.php" method="post">
+                <div class="form-group">
+                    <label for="manager-username">Username</label>
+                    <input type="text" id="manager-username" name="manager-username" required>
+                </div>
+                <div class="form-group">
+                    <label for="manager-password">Password</label>
+                    <input type="password" id="manager-password" name="manager-password" required>
+                </div>
+                <button type="submit">Login</button>
+            </form>
         </div>
-        <div class="form-group">
-            <label for="manager-password">Password</label>
-            <input type="password" id="manager-password" name="manager-password" required>
-        </div>
-        <button type="submit">Login</button>
-    </form>
-</div>
-
-         </form>
-        
-        </div>
-
-      </div>
-   
-        <style>
-            *{
+    </div>
+</body>
+<style>
+         *{
                 margin: 0;
                 padding: 0;
                 color: white;
@@ -315,47 +312,37 @@
 .manager-login-container button:hover {
     background-color: #555;
 }
+</style>
+<footer>
+    <p>&copy; <?php echo date('Y'); ?> Sol Plaatjie University</p>
+</footer>
+    </body>
+    <script>
+    document.addEventListener("DOMContentLoaded", function () {
+        // Get the relevant elements
+        let studentLoginButton = document.getElementById("student-login");
+        let managerLoginButton = document.getElementById("manager-login");
+        let studentLoginForm = document.querySelector(".student-login");
+        let managerLoginForm = document.querySelector(".manager-login");
 
-        </style>
-    </head>
-    
-    <footer>
-        <p>&copy; <?php echo date('Y'); ?> Sol Plaatjie University</p>
-    </footer>
-</body>
-<script>
+        // Function to toggle the active class for the student login form
+        function toggleStudentLoginForm() {
+            studentLoginForm.classList.add("active");
+            managerLoginForm.classList.remove("active");
+        }
 
-    let login=document.getElementById('login');
-    let login_from_form=document.getElementById('login_from_form');
+        // Function to toggle the active class for the manager login form
+        function toggleManagerLoginForm() {
+            studentLoginForm.classList.remove("active");
+            managerLoginForm.classList.add("active");
+        }
 
-    let register=document.getElementById('register');
-    let register_from_form=document.getElementById('register_from_form');
-    let main=document.getElementsByClassName('main')[0];
+        // Initially, show the student login form
+        toggleStudentLoginForm();
 
-
-    let classrm_login=()=>{    
-        main.classList.remove('active_login')
-    }
-
-    let classrm_register=()=>{
-        main.classList.remove('active_register')
-    }
-
-    let addclass_loginform=()=>{
-        classrm_register(); 
-        main.classList.toggle('active_login')
-    }
-    let addclass_registrationform=()=>{
-        classrm_login();     
-        main.classList.toggle('active_register')
-    }
-
-
-   login.addEventListener("click", addclass_loginform);
-   login_from_form.addEventListener("click", addclass_loginform);
- 
-  register.addEventListener("click", addclass_registrationform);
-  register_from_form.addEventListener("click", addclass_registrationform);
-
+        // Add event listeners to the buttons for toggling forms
+        studentLoginButton.addEventListener("click", toggleStudentLoginForm);
+        managerLoginButton.addEventListener("click", toggleManagerLoginForm);
+    });
 </script>
 </html>

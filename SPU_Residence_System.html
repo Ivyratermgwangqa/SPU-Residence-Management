@@ -18,26 +18,7 @@
         </div>
     </nav>
     <div class="main">
-        <form action="#">
-            <div class="registration">
-                <h2>Accommodation Application</h2>
-                <input type="text" name="name" id="name" placeholder="Name">
-                <input type="text" name="surname" id="surname" placeholder="Surname">
-                <input type="number" name="identity-number" id="identity-number" placeholder="Identity Number">
-                <input type="email" name="email" id="email" placeholder="Email">
-                <input type="number" name="student-number" id="student-number" placeholder="Student No">
-                <input type="text" list="residences" id="residence" name="residence" placeholder="Select Residence">
-                <datalist id="residences">
-                    <option value="Moroka Hall Of Residence"></option>
-                    <option value="Rathaga Hall Of Residence"></option>
-                    <option value="Tauana Hall Of Residence"></option>
-                    <option value="Muhudi Hall Of Residence"></option>
-                </datalist>
-                <input type="submit" value="Apply">
-                <div class="terms">Already have an account? <a href="#" id="login_from_form">Login</a></div>
-            </div>
-        </form>
-        <div class="login">
+        <div class="student-login">
             <h2>Student Login</h2>
             <form action="student-login.php" method="post">
                 <div class="form-group">
@@ -51,7 +32,7 @@
                 <button type="submit">Login</button>
             </form>
         </div>
-        <div class="manager-login-container">
+        <div class="manager-login">
             <h2>Manager Login</h2>
             <form action="manager-login.php" method="post">
                 <div class="form-group">
@@ -313,10 +294,6 @@
     background-color: #555;
 }
 </style>
-<footer>
-    <p>&copy; <?php echo date('Y'); ?> Sol Plaatjie University</p>
-</footer>
-    </body>
     <script>
     document.addEventListener("DOMContentLoaded", function () {
         // Get the relevant elements
@@ -345,4 +322,8 @@
         managerLoginButton.addEventListener("click", toggleManagerLoginForm);
     });
 </script>
+    </body>
+<footer>
+    <p>&copy; <?php echo date('Y'); ?> Sol Plaatjie University</p>
+</footer>
 </html>

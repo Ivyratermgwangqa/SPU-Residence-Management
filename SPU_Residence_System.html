@@ -3,323 +3,292 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   
 </head>
 <body>
     <nav>
-        <div class="logo">
+    <div class="logo">
             <h1>SPU Residence System</h1>
-        </div>
-        <div class="links">
-            <a href="#">Home</a>
-            <a href="#">Announcements</a>
-            <button class="login" id="student-login">Student Login</button>
-            <button class="login" id="manager-login">Manager Login</button>
-            <button id="register">Accommodation</button>
-        </div>
+    </div>
+    <div class="links">
+        <a href="#">Home</a>
+        <a href="#">Announcements</a>
+        <button id="login">Student Login</button>  
+        <button id="login">Manager Login</button>
+        <button id="register">Accommodation</button>
+    </div>
+        
     </nav>
     <div class="main">
-        <div class="student-login">
-            <h2>Student Login</h2>
-            <form action="student-login.php" method="post">
-                <div class="form-group">
-                    <label for="username">Username</label>
-                    <input type="text" id="username" name="username" required>
-                </div>
-                <div class="form-group">
-                    <label for="password">Password</label>
-                    <input type="password" id="password" name="password" required>
-                </div>
-                <button type="submit">Login</button>
-            </form>
+        <form action="#">
+          <div class="registration">
+             <h2>Accommodation Application</h2>
+              
+              <input type="text" name="" id="name" placeholder="Name">
+              <input type="text" name="" id="name" placeholder="Surname" >
+              <input type="number" name="" id="number" placeholder="identity number" >
+              <input type="email" name="" id="email" placeholder="Email">
+              <input type="number" name="" id="Number" placeholder="Student No" >
+              <input type="year" name="" id="year" placeholder="year" >
+             <input type="text" list="residences" id="residence" name="" placeholder="Select Residence">
+                  <datalist id="residences">
+                    <option value="Moroka Hall Of Residence"></option>
+                    <option value="Rathaga Hall Of Residence"></option>
+                    <option value="Tauana Hall Of Residence"></option>
+                    <option value="Muhudi Hall Of Residence"></option>
+                  </datalist>
+              <input type="submit"  value="Apply">
+              <div class="terms">Already have an account? <a href="#" id="login_from_form">Login</a></div>
+          </div>
+          </form>
+          <div class="login">
+            <h2>Login</h2>
+             <input type="email" name="" id="email" placeholder="Email">
+             <input type="password" name="" id="pass" placeholder="Password" >
+             <div class="Remember-Forgot"><p><input type="checkbox">Remember me? <a href="#"></p>Forgot password</a></div>
+             <input type="submit" value="Login">
+             <div class="terms">Dont have an account? <a href="#" id="register_from_form">register</a></div>
+         </div>
+         </form>
+        
         </div>
-        <div class="manager-login">
-            <h2>Manager Login</h2>
-            <form action="manager-login.php" method="post">
-                <div class="form-group">
-                    <label for="manager-username">Username</label>
-                    <input type="text" id="manager-username" name="manager-username" required>
-                </div>
-                <div class="form-group">
-                    <label for="manager-password">Password</label>
-                    <input type="password" id="manager-password" name="manager-password" required>
-                </div>
-                <button type="submit">Login</button>
-            </form>
-        </div>
-    </div>
-</body>
-<style>
-     * {
-    margin: 0;
-    padding: 0;
-    font-family: Arial, Helvetica, sans-serif;
-    text-decoration: none;
-}
 
-body {
-    background-image: url('images/jpg/img.jpg');
-    background-position: bottom;
-    height: 100vh;
-    background-size: cover;
-    background-repeat: no-repeat;
-}
+      </div>
+   
+        <style>
+            *{
+                margin: 0;
+                padding: 0;
+                color: white;
+                font-family: Arial, Helvetica,sans-serif;
+                text-decoration: none;
 
-nav {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    background: transparent;
-}
+            }
 
-h1 {
-    padding-left: 35px;
-    font-size: 40px;
-    color: #0073e6; /* Blue */
-    transition: color 1s;
-}
+            body{
+                background-image: url('images/jpg/img.jpg');
+                background-position: bottom;
+                height: 100vh;
+                background-size: cover;
+                background-repeat: no-repeat;
+            }
 
-h1:hover {
-    color: #005bad; /* Darker blue on hover */
-    font-weight: bold;
-}
+            nav {
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+              background: transparent;
+            }
 
-#login, #register {
-    height: 50px;
-    width: 160px;
-    background-color: #0073e6; /* Blue */
-    color: white;
-    border: none;
-    cursor: pointer;
-    border-radius: 8px;
-    transition: background-color 1s;
-}
+            h1{
+                padding-left: 35px;
+                font-size: 40px;
+                color: white;
+                transition: color 1s;
+            }
 
-#login:hover, #register:hover {
-    background-color: #005bad; /* Darker blue on hover */
-    color: white;
-}
+            h1:hover{
+                color: black;
+                font-weight: bold;
+            }
 
-.login {
-    height: 400px;
-    width: 400px;
-    border: 2px solid #0073e6; /* Blue */
-    border-radius: 8px;
-    backdrop-filter: blur(20px);
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
-    position: absolute;
-    transform: scale(0) translateX(-800px);
-    transition: 1s;
-    background-color: white; /* White background */
-    color: black; /* Text color */
-}
+            #login {
+                height: 50px;
+                width: 100px;
+            }
 
-.login:hover {
-    background-color: #e6e6e6; /* Light gray background on hover */
-}
+            #register {
+                height: 50px;
+                width: 160px;
+            }
 
-.active_login .login {
-    transform: scale(1);
-}
+            .login{
+                height: 400px;
+                width: 400px;
+                border: 2px solid whitesmoke;
+            border-radius: 8px;
+            backdrop-filter: blur(20px);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+            position: absolute;
+           transform: scale(0) translateX(-800px);
+           transition: 1s;
+            }
 
-.Remember-Forgot {
-    display: flex;
-    justify-content: space-between;
-    width: 80%;
-    margin: 16px 0;
-}
+            .active_login .login{
+                transform: scale(1);
+            }
 
-p {
-    display: inline-block;
-}
+            .Remember-Forgot{
+                display: flex;
+                justify-content: space-between;
+                width: 80%;
+                margin: 16px 0;
+            }
 
-.main a {
-    color: #0073e6; /* Blue */
-    font-weight: bold;
-}
+            p{
+                display: inline-block;
+            }
 
-.links {
-    padding: 40px;
-}
+           .main a{
+            color: black;
+            font-weight: bold;
+           }
 
-.links a, button {
-    margin: 0px 20px;
-    position: relative;
-    font-size: 20px;
-    color: #333; /* Dark gray */
-}
+            .links{
+                padding: 40px;
+            }
 
-button:hover {
-    border: 2px solid #0073e6; /* Blue border on hover */
-    background-color: #e6e6e6; /* Light gray background on hover */
-    color: black;
-}
+            .links a,button{
+                margin: 0px 20px;
+                position: relative;
+                font-size: 20px;
+                color: white;
+            }
 
-h2 {
-    text-align: center;
-    margin-top: 20px;
-    color: #333;
-}
+            button {
+                background: transparent;
+                outline: none;
+                color: white;
+                border: none;
+                cursor: pointer;
+                border-radius: 8px;
+                transition: background-color 1s;
+            }
 
-.registration {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    width: 450px;
-    height: 560px;
-    flex-direction: column;
-    border: 2px solid #0073e6; /* Blue border */
-    border-radius: 8px;
-    backdrop-filter: blur(20px);
-    position: absolute;
-    top: 0;
-    left: 50%;
-    transform: translateX(-50%) scale(0) translateX(800px);
-    transition: 1s;
-    background-color: white; /* White background */
-    color: black; /* Text color */
-}
+           a:hover::before{
+                content: '';
+                position: absolute;
+                height: 8%;
+                width: 100%;
+                background-color: white;
+                bottom: -30%;
+            }
 
-.active_register .registration {
-    transform: translateX(-50%) scale(1);
-}
+            button:hover{
+                border: 2px solid whitesmoke;
+                background-color: white;
+                color: black;
+            }
 
-.main {
-    height: 80vh;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    position: relative;
-}
+            h2 {
+            text-align: center;
+            margin-top: 20px;
+            color: #333;
+        }
 
-input {
-    display: block;
-}
+        .registration {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            width: 450px;
+            height: 560px;
+            flex-direction: column;
+           border: 2px solid whitesmoke;
+            border-radius: 8px;
+            backdrop-filter: blur(20px);
+            position: absolute;
+            top: 0;
+            left: 50%;
+            transform: translateX(-50%) scale(0) translateX(800px);
+           transition: 1s;
+          
+        }
 
-input[type="submit"] {
-    width: 300px;
-    height: 40px;
-    font-size: 20px;
-    color: white;
-    margin: 8px 0px;
-    border: none;
-    outline: none;
-    border-radius: 8px;
-    background-color: #0073e6; /* Blue */
-    cursor: pointer;
-}
+        .active_register .registration{
+                transform: translateX(-50%) scale(1);
+            }
 
-input[type="password"], input[type="text"], input[type="email"], input[type="year"], input[type="number"] {
-    width: 300px;
-    height: 40px;
-    background: transparent;
-    outline: none;
-    border: none;
-    border-bottom: 2px solid #333; /* Dark gray border */
-    margin: 16px;
-    font-size: 17px;
-    caret-color: red;
-    color: #333;
-}
+        .main{
+            height: 80vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            position: relative;
+        }
 
-input::placeholder {
-    color: #333;
-}
+     input{
+        display: block;
+     }
 
-h2 {
-    font-size: 30px;
-    text-align: center;
-    color: #333;
-}
+        input[type="submit"] {
+           width: 300px;
+           height: 40px;
+           font-size: 20px;
+           color: black;
+          margin: 8px 0px;
+            border: none;
+            outline: none;
+            border-radius: 8px;
+        } 
 
-.terms {
-    margin: 16px 0px;
-}
-
-/* Manager Login Form Styling */
-.manager-login-container {
-    width: 400px;
-    background-color: #e6e6e6; /* Light gray background */
-    border: 2px solid #0073e6; /* Blue border */
-    border-radius: 8px;
-    padding: 20px;
-    margin-top: 20px;
-    text-align: center;
-}
-
-.manager-login-container h1 {
-    font-size: 24px;
-    margin-bottom: 20px;
-}
-
-.manager-login-container .form-group {
-    margin: 10px 0;
-}
-
-.manager-login-container label {
-    font-weight: bold;
-}
-
-.manager-login-container input[type="text"], .manager-login-container input[type="password"] {
-    width: 100%;
-    height: 40px;
-    background: transparent;
-    outline: none;
-    border: none;
-    border-bottom: 2px solid #333; /* Dark gray border */
-    margin: 10px 0;
-    font-size: 16px;
-    caret-color: #333;
-    color: #333;
-}
-
-.manager-login-container button {
-    background-color: #0073e6; /* Blue background */
-    color: white;
-    border: none;
-    padding: 10px 20px;
-    border-radius: 3px;
-    cursor: pointer;
-    transition: background-color 0.5s;
-}
-
-.manager-login-container button:hover {
-    background-color: #005bad; /* Darker blue background on hover */
-}
+        input[type="password"],input[type="text"],input[type="email"],input[type="year"],input[type="number"]{
+            width: 300px;
+            height: 40px;
+            background: transparent;
+            outline: none;
+            border: none;
+            border-bottom: 2px solid black;
+            margin: 16px;
+            font-size: 17px;
+            caret-color: red;
+            color: whitesmoke;
+        }
     
-</style>
-    <script>
-    document.addEventListener("DOMContentLoaded", function () {
-        // Get the relevant elements
-        let studentLoginButton = document.getElementById("student-login");
-        let managerLoginButton = document.getElementById("manager-login");
-        let studentLoginForm = document.querySelector(".student-login");
-        let managerLoginForm = document.querySelector(".manager-login");
-
-        // Function to toggle the active class for the student login form
-        function toggleStudentLoginForm() {
-            studentLoginForm.classList.add("active");
-            managerLoginForm.classList.remove("active");
+        input::placeholder{
+            color:whitesmoke;
         }
 
-        // Function to toggle the active class for the manager login form
-        function toggleManagerLoginForm() {
-            studentLoginForm.classList.remove("active");
-            managerLoginForm.classList.add("active");
+        h2{
+            font-size: 30px;
+            text-align: center;
         }
 
-        // Initially, show the student login form
-        toggleStudentLoginForm();
+        .terms{
+            margin: 16px 0px;
+        }
+        </style>
+    </head>
+    
+    <footer>
+        <p>&copy; <?php echo date('Y'); ?> Sol Plaatjie University</p>
+    </footer>
+</body>
+<script>
 
-        // Add event listeners to the buttons for toggling forms
-        studentLoginButton.addEventListener("click", toggleStudentLoginForm);
-        managerLoginButton.addEventListener("click", toggleManagerLoginForm);
-    });
+    let login=document.getElementById('login');
+    let login_from_form=document.getElementById('login_from_form');
+
+    let register=document.getElementById('register');
+    let register_from_form=document.getElementById('register_from_form');
+    let main=document.getElementsByClassName('main')[0];
+
+
+    let classrm_login=()=>{    
+        main.classList.remove('active_login')
+    }
+
+    let classrm_register=()=>{
+        main.classList.remove('active_register')
+    }
+
+    let addclass_loginform=()=>{
+        classrm_register(); 
+        main.classList.toggle('active_login')
+    }
+    let addclass_registrationform=()=>{
+        classrm_login();     
+        main.classList.toggle('active_register')
+    }
+
+
+   login.addEventListener("click", addclass_loginform);
+   login_from_form.addEventListener("click", addclass_loginform);
+ 
+  register.addEventListener("click", addclass_registrationform);
+  register_from_form.addEventListener("click", addclass_registrationform);
+
 </script>
-    </body>
-<footer>
-    <p>&copy; <?php echo date('Y'); ?> Sol Plaatjie University</p>
-</footer>
 </html>

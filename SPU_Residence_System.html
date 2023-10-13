@@ -49,204 +49,200 @@
     </div>
 </body>
 <style>
-         *{
-                margin: 0;
-                padding: 0;
-                color: white;
-                font-family: Arial, Helvetica,sans-serif;
-                text-decoration: none;
+     * {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, Helvetica, sans-serif;
+    text-decoration: none;
+}
 
-            }
+body {
+    background-image: url('images/jpg/img.jpg');
+    background-position: bottom;
+    height: 100vh;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
 
-            body{
-                background-image: url('images/jpg/img.jpg');
-                background-position: bottom;
-                height: 100vh;
-                background-size: cover;
-                background-repeat: no-repeat;
-            }
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: transparent;
+}
 
-            nav {
-                display: flex;
-                justify-content: space-between;
-                align-items: center;
-              background: transparent;
-            }
+h1 {
+    padding-left: 35px;
+    font-size: 40px;
+    color: #0073e6; /* Blue */
+    transition: color 1s;
+}
 
-            h1{
-                padding-left: 35px;
-                font-size: 40px;
-                color: white;
-                transition: color 1s;
-            }
+h1:hover {
+    color: #005bad; /* Darker blue on hover */
+    font-weight: bold;
+}
 
-            h1:hover{
-                color: black;
-                font-weight: bold;
-            }
+#login, #register {
+    height: 50px;
+    width: 160px;
+    background-color: #0073e6; /* Blue */
+    color: white;
+    border: none;
+    cursor: pointer;
+    border-radius: 8px;
+    transition: background-color 1s;
+}
 
-            #login {
-                height: 50px;
-                width: 100px;
-            }
+#login:hover, #register:hover {
+    background-color: #005bad; /* Darker blue on hover */
+    color: white;
+}
 
-            #register {
-                height: 50px;
-                width: 160px;
-            }
+.login {
+    height: 400px;
+    width: 400px;
+    border: 2px solid #0073e6; /* Blue */
+    border-radius: 8px;
+    backdrop-filter: blur(20px);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    position: absolute;
+    transform: scale(0) translateX(-800px);
+    transition: 1s;
+    background-color: white; /* White background */
+    color: black; /* Text color */
+}
 
-            .login{
-                height: 400px;
-                width: 400px;
-                border: 2px solid whitesmoke;
-            border-radius: 8px;
-            backdrop-filter: blur(20px);
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            flex-direction: column;
-            position: absolute;
-           transform: scale(0) translateX(-800px);
-           transition: 1s;
-            }
+.login:hover {
+    background-color: #e6e6e6; /* Light gray background on hover */
+}
 
-            .active_login .login{
-                transform: scale(1);
-            }
+.active_login .login {
+    transform: scale(1);
+}
 
-            .Remember-Forgot{
-                display: flex;
-                justify-content: space-between;
-                width: 80%;
-                margin: 16px 0;
-            }
+.Remember-Forgot {
+    display: flex;
+    justify-content: space-between;
+    width: 80%;
+    margin: 16px 0;
+}
 
-            p{
-                display: inline-block;
-            }
+p {
+    display: inline-block;
+}
 
-           .main a{
-            color: black;
-            font-weight: bold;
-           }
+.main a {
+    color: #0073e6; /* Blue */
+    font-weight: bold;
+}
 
-            .links{
-                padding: 40px;
-            }
+.links {
+    padding: 40px;
+}
 
-            .links a,button{
-                margin: 0px 20px;
-                position: relative;
-                font-size: 20px;
-                color: white;
-            }
+.links a, button {
+    margin: 0px 20px;
+    position: relative;
+    font-size: 20px;
+    color: #333; /* Dark gray */
+}
 
-            button {
-                background: transparent;
-                outline: none;
-                color: white;
-                border: none;
-                cursor: pointer;
-                border-radius: 8px;
-                transition: background-color 1s;
-            }
+button:hover {
+    border: 2px solid #0073e6; /* Blue border on hover */
+    background-color: #e6e6e6; /* Light gray background on hover */
+    color: black;
+}
 
-           a:hover::before{
-                content: '';
-                position: absolute;
-                height: 8%;
-                width: 100%;
-                background-color: white;
-                bottom: -30%;
-            }
+h2 {
+    text-align: center;
+    margin-top: 20px;
+    color: #333;
+}
 
-            button:hover{
-                border: 2px solid whitesmoke;
-                background-color: white;
-                color: black;
-            }
+.registration {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 450px;
+    height: 560px;
+    flex-direction: column;
+    border: 2px solid #0073e6; /* Blue border */
+    border-radius: 8px;
+    backdrop-filter: blur(20px);
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%) scale(0) translateX(800px);
+    transition: 1s;
+    background-color: white; /* White background */
+    color: black; /* Text color */
+}
 
-            h2 {
-            text-align: center;
-            margin-top: 20px;
-            color: #333;
-        }
+.active_register .registration {
+    transform: translateX(-50%) scale(1);
+}
 
-        .registration {
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            width: 450px;
-            height: 560px;
-            flex-direction: column;
-           border: 2px solid whitesmoke;
-            border-radius: 8px;
-            backdrop-filter: blur(20px);
-            position: absolute;
-            top: 0;
-            left: 50%;
-            transform: translateX(-50%) scale(0) translateX(800px);
-           transition: 1s;
-          
-        }
+.main {
+    height: 80vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+}
 
-        .active_register .registration{
-                transform: translateX(-50%) scale(1);
-            }
+input {
+    display: block;
+}
 
-        .main{
-            height: 80vh;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            position: relative;
-        }
+input[type="submit"] {
+    width: 300px;
+    height: 40px;
+    font-size: 20px;
+    color: white;
+    margin: 8px 0px;
+    border: none;
+    outline: none;
+    border-radius: 8px;
+    background-color: #0073e6; /* Blue */
+    cursor: pointer;
+}
 
-     input{
-        display: block;
-     }
+input[type="password"], input[type="text"], input[type="email"], input[type="year"], input[type="number"] {
+    width: 300px;
+    height: 40px;
+    background: transparent;
+    outline: none;
+    border: none;
+    border-bottom: 2px solid #333; /* Dark gray border */
+    margin: 16px;
+    font-size: 17px;
+    caret-color: red;
+    color: #333;
+}
 
-        input[type="submit"] {
-           width: 300px;
-           height: 40px;
-           font-size: 20px;
-           color: black;
-          margin: 8px 0px;
-            border: none;
-            outline: none;
-            border-radius: 8px;
-        } 
+input::placeholder {
+    color: #333;
+}
 
-        input[type="password"],input[type="text"],input[type="email"],input[type="year"],input[type="number"]{
-            width: 300px;
-            height: 40px;
-            background: transparent;
-            outline: none;
-            border: none;
-            border-bottom: 2px solid black;
-            margin: 16px;
-            font-size: 17px;
-            caret-color: red;
-            color: whitesmoke;
-        }
-    
-        input::placeholder{
-            color:whitesmoke;
-        }
+h2 {
+    font-size: 30px;
+    text-align: center;
+    color: #333;
+}
 
-        h2{
-            font-size: 30px;
-            text-align: center;
-        }
+.terms {
+    margin: 16px 0px;
+}
 
-        .terms{
-            margin: 16px 0px;
-        }
-            /* Add styles for the manager login form container */
+/* Manager Login Form Styling */
 .manager-login-container {
     width: 400px;
-    background-color: rgba(255, 255, 255, 0.7);
-    border: 2px solid #333;
+    background-color: #e6e6e6; /* Light gray background */
+    border: 2px solid #0073e6; /* Blue border */
     border-radius: 8px;
     padding: 20px;
     margin-top: 20px;
@@ -266,14 +262,13 @@
     font-weight: bold;
 }
 
-.manager-login-container input[type="text"],
-.manager-login-container input[type="password"] {
+.manager-login-container input[type="text"], .manager-login-container input[type="password"] {
     width: 100%;
     height: 40px;
     background: transparent;
     outline: none;
     border: none;
-    border-bottom: 2px solid #333;
+    border-bottom: 2px solid #333; /* Dark gray border */
     margin: 10px 0;
     font-size: 16px;
     caret-color: #333;
@@ -281,7 +276,7 @@
 }
 
 .manager-login-container button {
-    background-color: #333;
+    background-color: #0073e6; /* Blue background */
     color: white;
     border: none;
     padding: 10px 20px;
@@ -291,8 +286,9 @@
 }
 
 .manager-login-container button:hover {
-    background-color: #555;
+    background-color: #005bad; /* Darker blue background on hover */
 }
+    
 </style>
     <script>
     document.addEventListener("DOMContentLoaded", function () {

@@ -11,12 +11,12 @@ body {
     background-position: center;
     background-size: cover;
     height: 100vh;
-    background-color: #FFD700; /* Bright yellow background */
+    background-color: #f0f0f0; /* Light gray background */
 }
 
 nav {
-    background: #FF6347; /* Tomato red background */
-    color: #FFF; /* White text */
+    background: #333; /* Dark gray background */
+    color: #fff; /* White text */
     display: flex;
     justify-content: space-between;
     padding: 10px 20px;
@@ -25,7 +25,7 @@ nav {
 nav .logo {
     font-size: 28px;
     font-weight: bold;
-    color: #FFF; /* White text */
+    color: #fff; /* White text */
 }
 
 nav .links a,
@@ -33,7 +33,7 @@ nav .links button {
     margin: 0 20px;
     position: relative;
     text-decoration: none;
-    color: #FFF; /* White text */
+    color: #fff; /* White text */
     font-weight: bold;
     transition: color 0.5s;
 }
@@ -44,13 +44,13 @@ nav .links button:hover::before {
     position: absolute;
     height: 2px;
     width: 100%;
-    background-color: #FFF; /* White underline on hover */
+    background-color: #fff; /* White underline on hover */
     bottom: -5px;
 }
 
 h1 {
     font-size: 36px;
-    color: #FFD700; /* Bright yellow text */
+    color: #333; /* Dark gray text */
     font-weight: bold;
 }
 
@@ -61,10 +61,10 @@ h1 {
     width: 400px;
     height: 440px;
     flex-direction: column;
-    border: 2px solid #FFD700; /* Bright yellow border */
+    border: 2px solid #333; /* Dark gray border */
     border-radius: 8px;
     backdrop-filter: blur(10px);
-    background-color: rgba(255, 69, 0, 0.7); /* Tomato red background with transparency */
+    background-color: rgba(255, 255, 255, 0.7); /* White background with transparency */
 }
 
 .container input[type="text"],
@@ -75,16 +75,16 @@ h1 {
     background: transparent;
     outline: none;
     border: none;
-    border-bottom: 2px solid #FFD700; /* Bright yellow underline */
+    border-bottom: 2px solid #333; /* Dark gray underline */
     margin: 16px 0;
     font-size: 16px;
-    caret-color: #FFD700; /* Bright yellow cursor */
-    color: #FFD700; /* Bright yellow text */
+    caret-color: #333; /* Dark gray cursor */
+    color: #333; /* Dark gray text */
 }
 
 .container input[type="submit"] {
-    background-color: #FFD700; /* Bright yellow background */
-    color: #FF6347; /* Tomato red text */
+    background-color: #333; /* Dark gray background */
+    color: #fff; /* White text */
     border: none;
     padding: 10px 20px;
     border-radius: 3px;
@@ -93,7 +93,7 @@ h1 {
 }
 
 .container input[type="submit"]:hover {
-    background-color: #FFC125; /* Lighter yellow on hover */
+    background-color: #555; /* Slightly darker gray on hover */
 }
 
 .datalist {
@@ -102,17 +102,17 @@ h1 {
     background: transparent;
     outline: none;
     border: none;
-    border-bottom: 2px solid #FFD700; /* Bright yellow underline */
+    border-bottom: 2px solid #333; /* Dark gray underline */
     margin: 16px 0;
     font-size: 16px;
-    caret-color: #FFD700; /* Bright yellow cursor */
-    color: #FFD700; /* Bright yellow text */
+    caret-color: #333; /* Dark gray cursor */
+    color: #333; /* Dark gray text */
 }
 
 .login-container {
     width: 400px;
-    background-color: rgba(255, 255, 255, 0.7);
-    border: 2px solid #FFD700; /* Bright yellow border */
+    background-color: rgba(255, 255, 255, 0.7); /* White background with transparency */
+    border: 2px solid #333; /* Dark gray border */
     border-radius: 8px;
     padding: 20px;
     margin-top: 20px;
@@ -122,7 +122,7 @@ h1 {
 .login-container h1 {
     font-size: 24px;
     margin-bottom: 20px;
-    color: #FF6347; /* Tomato red text */
+    color: #333; /* Dark gray text */
 }
 
 .login-container .form-group {
@@ -140,16 +140,16 @@ h1 {
     background: transparent;
     outline: none;
     border: none;
-    border-bottom: 2px solid #FFD700; /* Bright yellow underline */
+    border-bottom: 2px solid #333; /* Dark gray underline */
     margin: 10px 0;
     font-size: 16px;
-    caret-color: #FFD700; /* Bright yellow cursor */
-    color: #FFD700; /* Bright yellow text */
+    caret-color: #333; /* Dark gray cursor */
+    color: #333; /* Dark gray text */
 }
 
 .login-container button {
-    background-color: #FF6347; /* Tomato red background */
-    color: #FFF; /* White text */
+    background-color: #333; /* Dark gray background */
+    color: #fff; /* White text */
     border: none;
     padding: 10px 20px;
     border-radius: 3px;
@@ -158,13 +158,13 @@ h1 {
 }
 
 .login-container button:hover {
-    background-color: #FF4500; /* Slightly darker red on hover */
+    background-color: #555; /* Slightly darker gray on hover */
 }
 
 .announcements {
     padding: 20px;
     background-color: rgba(0, 128, 0, 0.7); /* Green background with transparency */
-    border: 2px solid #FFD700; /* Bright yellow border */
+    border: 2px solid #333; /* Dark gray border */
     border-radius: 8px;
     margin-top: 20px;
 }
@@ -173,7 +173,7 @@ h1 {
     font-size: 24px;
     font-weight: bold;
     margin-bottom: 10px;
-    color: #FF6347; /* Tomato red text */
+    color: #333; /* Dark gray text */
 }
 
 .announcements ul {
@@ -187,18 +187,18 @@ h1 {
 
 .announcements a {
     text-decoration: none;
-    color: #FFD700; /* Bright yellow text */
+    color: #333; /* Dark gray text */
     transition: color 0.5s;
 }
 
 .announcements a:hover {
-    color: #FF4500; /* Slightly darker red on hover */
+    color: #555; /* Slightly darker gray on hover */
 }
 
 footer {
     text-align: center;
     padding: 20px 0;
-    background-color: #333;
-    color: #FFF; /* White text */
+    background-color: #333; /* Dark gray background */
+    color: #fff; /* White text */
     font-weight: bold;
 }

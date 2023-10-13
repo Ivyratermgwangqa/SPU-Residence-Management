@@ -7,28 +7,25 @@
 
 body {
     font-family: Arial, sans-serif;
-    background-image: url('background.jpg'); /* Set your background image path */
+    background-image: url('background.jpg');
     background-position: center;
     background-size: cover;
     height: 100vh;
+    background-color: #f0f0f0; /* Add a background color as a fallback */
 }
 
 nav {
+    background: #333;
+    color: white;
     display: flex;
     justify-content: space-between;
-    align-items: center;
-    background: transparent;
+    padding: 10px 20px;
 }
 
 nav .logo {
-    padding-left: 20px;
     font-size: 28px;
     font-weight: bold;
-    color: #333;
-}
-
-nav .links {
-    padding: 20px;
+    color: #f0f0f0;
 }
 
 nav .links a,
@@ -36,7 +33,7 @@ nav .links button {
     margin: 0 20px;
     position: relative;
     text-decoration: none;
-    color: #333;
+    color: #f0f0f0;
     font-weight: bold;
     transition: color 0.5s;
 }
@@ -47,7 +44,7 @@ nav .links button:hover::before {
     position: absolute;
     height: 2px;
     width: 100%;
-    background-color: #333;
+    background-color: #f0f0f0;
     bottom: -5px;
 }
 
@@ -175,6 +172,7 @@ h1 {
     font-size: 24px;
     font-weight: bold;
     margin-bottom: 10px;
+    color: #333;
 }
 
 .announcements ul {

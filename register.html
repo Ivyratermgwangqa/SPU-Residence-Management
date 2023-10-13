@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Student Residence System - Registration</title>
+    <link rel="stylesheet" href="styles.css"> <!-- Include your CSS file if needed -->
+    <style>
+        /* Custom CSS styles for the navigation menu */
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: Arial, sans-serif;
+            background-color: #f2f2f2;
+        }
+
+        nav {
+            background-color: #007bff;
+            color: white;
+            padding: 10px 0;
+        }
+
+        .logo {
+            display: flex;
+            align-items: center;
+        }
+
+        .logo h1 {
+            font-size: 24px;
+            margin-left: 10px;
+        }
+
+        .links {
+            display: flex;
+            align-items: center;
+        }
+
+        .links a, .links button {
+            text-decoration: none;
+            color: white;
+            font-weight: bold;
+            padding: 10px 20px;
+            margin: 0 10px;
+            background-color: #0056b3;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+
+        .links a:hover, .links button:hover {
+            background-color: #004d99;
+        }
+
+        .links button#student-login, .links button#manager-login {
+            background-color: #f2f2f2;
+            color: #333;
+        }
+
+        /* Add any additional CSS styles here */
+    </style>
+</head>
+<body>
+    <nav>
+        <div class="logo">
+            <h1>SPU Residence System</h1>
+        </div>
+        <div class="links">
+            <a href="#">Home</a>
+            <a href="#">Announcements</a>
+            <button id="student-login">Student Login</button>
+            <button id="manager-login">Manager Login</button>
+            <button id="register">Accommodation</button>
+        </div>
+    </nav>
+
+    <div class="main">
+        <form action="register.php" method="POST">
+            <div class="container">
+                <h2>Student Registration</h2>
+                <!-- Your registration form inputs go here -->
+            </div>
+        </form>
+    </div>
+
+    <!-- The rest of your content -->
+
+    <footer>
+        <p>&copy; <?php echo date('Y'); ?> Sol Plaatjie University</p>
+    </footer>
+</body>
+</html>

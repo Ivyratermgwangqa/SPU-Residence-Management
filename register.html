@@ -79,6 +79,23 @@
             <div class="container">
                 <h2>Student Registration</h2>
                 <!-- Your registration form inputs go here -->
+
+                <!-- Add a hidden input field for timestamp -->
+                <input type="hidden" name="registrationTimestamp" id="registrationTimestamp">
+
+                <!-- Example registration fields -->
+                <label for="name">Name:</label>
+                <input type="text" name="name" id="name" required>
+                <br>
+
+                <label for="email">Email:</label>
+                <input type="email" name="email" id="email" required>
+                <br>
+
+                <!-- Your other form fields here -->
+
+                <!-- Submit button -->
+                <input type="submit" value="Register">
             </div>
         </form>
     </div>
@@ -88,5 +105,32 @@
     <footer>
         <p>&copy; <?php echo date('Y'); ?> Sol Plaatjie University</p>
     </footer>
+
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            // Get the form element
+            const registrationForm = document.querySelector('form');
+
+            // Add an event listener to the form submission
+            registrationForm.addEventListener('submit', function (event) {
+                // Prevent the form from submitting normally for now (you can remove this line for actual submission)
+                event.preventDefault();
+
+                // Get the current date and time
+                const currentDate = new Date();
+                const timestamp = currentDate.toISOString();
+
+                // Set the timestamp value in the hidden input field
+                const registrationTimestampField = document.getElementById('registrationTimestamp');
+                registrationTimestampField.value = timestamp;
+
+                // You can remove the following line in your final code; it's for demonstration
+                console.log('Registration Timestamp:', timestamp);
+
+                // Now, the form will submit with the timestamp included.
+                // You can proceed with form submission or additional processing here.
+            });
+        });
+    </script>
 </body>
 </html>

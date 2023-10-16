@@ -91,7 +91,17 @@ form {
 }
 
 /* ... Rest of the styles ... */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 20px 0;
+}
 
+table th, table td {
+    padding: 12px 15px;
+    text-align: left;
+    border-bottom: 1px solid #ccc;
+}
 /* Add scrollbar styles for better user experience */
 ::-webkit-scrollbar {
     width: 12px;

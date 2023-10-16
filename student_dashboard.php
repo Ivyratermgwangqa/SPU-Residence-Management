@@ -11,6 +11,28 @@ if (!isset($_SESSION["student_username"])) {
 <html>
 <head>
     <title>Student Dashboard</title>
+    <style>
+        /* Add your CSS styles here to enhance the appearance of the dashboard */
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f2f2f2;
+            text-align: center;
+        }
+        h1 {
+            color: #007bff;
+        }
+        p {
+            font-size: 18px;
+            margin: 10px;
+        }
+        a {
+            color: #007bff;
+            text-decoration: none;
+        }
+        a:hover {
+            text-decoration: underline;
+        }
+    </style>
 </head>
 <body>
     <h1>Welcome, Student!</h1>
